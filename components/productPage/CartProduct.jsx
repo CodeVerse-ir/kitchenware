@@ -1,14 +1,17 @@
 "use client";
 
-import product1 from '../../public/utils/image/products/p1.jpg';
+import product1 from '../../public/utils/image/products/product1/product1.jpeg';
+import product2 from '../../public/utils/image/products/product1/product2.jpeg';
+import product3 from '../../public/utils/image/products/product1/product3.jpeg';
+import product4 from '../../public/utils/image/products/product1/product4.jpeg';
+import product5 from '../../public/utils/image/products/product1/product5.jpeg';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import Clock from '../homePage/Clock';
 import SvgCartProduct from '../svg/SvgCartProduct';
-import { color } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import AlertPictures from './AlertPictures';
+import NoScroll from '../ui/NoScroll';
 
 const cartProduct = {
     productName: 'سرویس چینی زرین نئوکلاسیک دلسا 6 نفره 29 پارچه',
@@ -17,7 +20,7 @@ const cartProduct = {
     discount: 65000,
     clock: '01:22:10:05',
     path: '/product',
-    image: product1,
+    image: [product1, product2, product3, product4, product5],
     code: '64656',
     brand: 'چینی زرین',
     category: 'سرویس چینی غذاخوری 6 نفره',
@@ -72,9 +75,11 @@ export default function CartProduct() {
     const [star, setStar] = useState(cartProduct.star);
     const [like, setLike] = useState(false);
     const [bootmark, setBootmark] = useState(false);
+    const [showPicture, setShowPicture] = useState(false);
 
     const handleStar = () => setLike(!like);
     const handleBootmark = () => setBootmark(!bootmark);
+    const handleShowPicture = () => setShowPicture(!showPicture);
 
     return (
         <>
@@ -131,7 +136,7 @@ export default function CartProduct() {
                         </div>
                         <Image
                             className="max-w-72 max-h-72 rounded-xl"
-                            src={cartProduct.image}
+                            src={cartProduct.image[0]}
                             alt="product"
                             sizes="(min-width: 768px)"
                             loading="lazy"
@@ -141,55 +146,30 @@ export default function CartProduct() {
                     {/* <!-- Pictures --> */}
                     <div className="flex items-center justify-center gap-x-2">
 
-                        <a className="flex items-center justify-center w-20 h-20 p-1 rounded-xl border border-gray-300" href="">
-                            <Image
-                                className="w-16 h-16"
-                                src={cartProduct.image}
-                                alt="product"
-                                sizes="(min-width: 768px)"
-                                loading="lazy"
-                            />
-                        </a>
-                        <a className="flex items-center justify-center w-20 h-20 p-1 rounded-xl border border-gray-300" href="">
-                            <Image
-                                className="w-16 h-16"
-                                src={cartProduct.image}
-                                alt="product"
-                                sizes="(min-width: 768px)"
-                                loading="lazy"
-                            />
-                        </a>
-                        <a className="flex items-center justify-center w-20 h-20 p-1 rounded-xl border border-gray-300" href="">
-                            <Image
-                                className="w-16 h-16"
-                                src={cartProduct.image}
-                                alt="product"
-                                sizes="(min-width: 768px)"
-                                loading="lazy"
-                            />
-                        </a>
-                        <a className="group relative flex items-center justify-center w-20 h-20 p-1 rounded-xl border border-gray-300"
-                            href="">
-                            <Image
-                                className="w-16 h-16 blur-[2px]"
-                                src={cartProduct.image}
-                                alt="product"
-                                sizes="(min-width: 768px)"
-                                loading="lazy"
-                            />
-                            <div
-                                className="absolute child:inset-0 mx-auto flex gap-x-1 child:w-2 child:h-2 child:rounded-full child:border-2 child:border-gray-700 group-hover:gap-x-2 group-hover:child:bg-gray-700 child:transition-all transition-all">
-                                <div className="">
+                        <div className="flex items-center justify-center gap-x-2 text-gray-300 dark:text-gray-400">
+                            {Array.from({ length: 4 }, (_, index) => (
+                                <div key={index} className="group relative flex items-center justify-center w-20 h-20 p-1 rounded-xl border border-gray-300 cursor-pointer" href="" onClick={handleShowPicture}>
+                                    <Image
+                                        className={`w-16 h-16 ${index === 3 && "blur-sm"}`}
+                                        src={cartProduct.image[index + 1]}
+                                        alt="product"
+                                        sizes="(min-width: 768px)"
+                                        loading="lazy"
+                                    />
+                                    {index === 3 &&
+                                        <div
+                                            className="absolute child:inset-0 mx-auto flex gap-x-1 child:w-2 child:h-2 child:rounded-full child:border-2 child:border-gray-700 group-hover:gap-x-2 group-hover:child:bg-gray-700 child:transition-all transition-all">
+                                            <div className="">
+                                            </div>
+                                            <div className="">
+                                            </div>
+                                            <div className="">
+                                            </div>
+                                        </div>
+                                    }
                                 </div>
-                                <div className="">
-                                </div>
-                                <div className="">
-                                </div>
-                            </div>
-                        </a>
-
-
-
+                            ))}
+                        </div>
                     </div>
                 </div >
 
@@ -377,7 +357,11 @@ export default function CartProduct() {
 
             </div>
 
-            <AlertPictures />
+            <AlertPictures showPicture={showPicture} handleShowPicture={handleShowPicture} />
+
+            <NoScroll noScroll={showPicture} />
+
+            <div className={`${showPicture ? "visible opacity-100" : "invisible opacity-0"} overlay-alert`} onClick={handleShowPicture}></div>
         </>
     )
 }

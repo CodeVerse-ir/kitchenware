@@ -91,7 +91,7 @@
     }
 
     .overlay-alert {
-        @apply invisible opacity-0 fixed inset-0 w-full h-full bg-black/90 transition-all z-20;
+        @apply fixed inset-0 w-full h-full bg-black/90 transition-all z-20;
     }
 
     .overlay-alert--visible {
@@ -131,11 +131,23 @@
     }
 
     .alert-picture {
-        @apply alert w-[90%] h-[85%] lg:w-[800px] lg:h-[520px];
+        @apply alert w-[350px] h-[370px] sm:w-[400px] md:w-[500px] md:h-[420px] lg:w-[800px] lg:h-[550px];
     }
 
-    .alert-picture--visible {
-        @apply visible opacity-100;
+    .swiperPicture {
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 40%;
+        }
+
+        @media (max-width: 768px) {
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+        }
     }
 
     .submenu {
