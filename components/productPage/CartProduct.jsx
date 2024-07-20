@@ -7,22 +7,22 @@ import Link from 'next/link';
 import Clock from '../homePage/Clock';
 import SvgCartProduct from '../svg/SvgCartProduct';
 import { color } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const cartProduct = {
     productName: 'سرویس چینی زرین نئوکلاسیک دلسا 6 نفره 29 پارچه',
-    price: 60000,
+    price: 59800,
     discountPercent: 8,
-    discount: 0,
-    clock: '01:01:01:05',
+    discount: 65000,
+    clock: '01:22:10:05',
     path: '/product',
     image: product1,
-    star: 5,
     code: '64656',
     brand: 'چینی زرین',
     category: 'سرویس چینی غذاخوری 6 نفره',
-    star: 5,
-    like: 98,
-    bootmark: 10,
+    star: "4.5",
+    like: "98000",
+    bootmark: "1500",
     attributes: [
         [
             'قالب :',
@@ -67,6 +67,14 @@ const cartProduct = {
 
 
 export default function CartProduct() {
+
+    const [star, setStar] = useState(cartProduct.star);
+    const [like, setLike] = useState(false);
+    const [bootmark, setBootmark] = useState(false);
+
+    const handleStar = () => setLike(!like);
+    const handleBootmark = () => setBootmark(!bootmark);
+
     return (
         <>
             <SvgCartProduct />
@@ -92,7 +100,7 @@ export default function CartProduct() {
                                 </span>
                             </div>
 
-                            <Clock clock={cartProduct.clock} />
+                            <Clock clock={cartProduct.clock} showClock={false} />
 
                         </div>
                     }
@@ -108,13 +116,13 @@ export default function CartProduct() {
                                 </svg>
                             </div>
                             <div
-                                className="group flex items-center justify-center w-12 h-12 rounded-xl text-orange-300 border border-gray-300">
+                                className={`group flex items-center justify-center w-12 h-12 rounded-xl ${like ? "text-red-500" : "text-orange-300"} border border-gray-300`} onClick={handleStar}>
                                 <svg className="w-5 h-5 group-hover:scale-125 transition-all">
                                     <use href="#heart-solid"></use>
                                 </svg>
                             </div>
                             <div
-                                className="group flex items-center justify-center w-12 h-12 rounded-xl text-orange-300 border border-gray-300">
+                                className={`group flex items-center justify-center w-12 h-12 rounded-xl ${bootmark ? "text-red-500" : "text-orange-300"} border border-gray-300`} onClick={handleBootmark}>
                                 <svg className="w-5 h-5 group-hover:scale-125 transition-all">
                                     <use href="#bookmark-solid"></use>
                                 </svg>
@@ -148,7 +156,8 @@ export default function CartProduct() {
                                 alt="product"
                                 sizes="(min-width: 768px)"
                                 loading="lazy"
-                            />                    </a>
+                            />
+                        </a>
                         <a className="flex items-center justify-center w-20 h-20 p-1 rounded-xl border border-gray-300" href="">
                             <Image
                                 className="w-16 h-16"
@@ -156,7 +165,8 @@ export default function CartProduct() {
                                 alt="product"
                                 sizes="(min-width: 768px)"
                                 loading="lazy"
-                            />                    </a>
+                            />
+                        </a>
                         <a className="group relative flex items-center justify-center w-20 h-20 p-1 rounded-xl border border-gray-300"
                             href="">
                             <Image
@@ -306,15 +316,13 @@ export default function CartProduct() {
                                 <div className="space-y-2.5 text-sm md:text-base lg:text-lg">
 
                                     <div
-                                        className="flex items-center justify-between w-30 md:w-36 lg:w-40 gap-x-2 py-1 px-2 rounded-xl border border-gray-300">
+                                        className="flex items-center justify-between w-24 md:w-30 lg:w-36 gap-x-2 py-1 px-4 rounded-xl border border-gray-300">
 
                                         {/* <!-- Star --> */}
                                         <div className="flex text-gray-300 dark:text-gray-400">
-                                            {Array.from({ length: 5 }, (_, index) => (
-                                                <svg key={index} className={`mb-1 w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 ${index < cartProduct.star && "text-yellow-400"}`}>
-                                                    <use href="#star"></use>
-                                                </svg>
-                                            ))}
+                                            <svg className="mb-1 w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-yellow-400">
+                                                <use href="#star"></use>
+                                            </svg>
                                         </div>
 
                                         <span className="pt-1 text-gray-700 dark:text-white">
@@ -325,7 +333,7 @@ export default function CartProduct() {
 
 
                                     <div
-                                        className="flex items-center justify-between w-30 md:w-36 lg:w-40 gap-x-2 py-1 px-2 rounded-xl border border-gray-300">
+                                        className="flex items-center justify-between w-24 md:w-30 lg:w-36 gap-x-2 py-1 px-4 rounded-xl border border-gray-300">
 
                                         {/* <!-- heart --> */}
                                         <div className="flex text-red-500">
@@ -334,18 +342,13 @@ export default function CartProduct() {
                                             </svg>
                                         </div>
 
-                                        <div className="flex pt-1 gap-x-1.5 text-gray-700 dark:text-white">
-                                            <span>
-                                                k
-                                            </span>
-                                            <span>
-                                                {cartProduct.like}
-                                            </span>
+                                        <div className="flex pt-1 gap-x-1.5 text-gray-700 dark:text-white" style={{ direction: 'ltr' }}>
+                                            {cartProduct.like > 1000 ? `${(cartProduct.like / 1000).toFixed(1).replace(/\.0$/, '')} k` : cartProduct.like}
                                         </div>
                                     </div>
 
                                     <div
-                                        className="flex items-center justify-between w-30 md:w-36 lg:w-40 gap-x-2 py-1 px-2 rounded-xl border border-gray-300">
+                                        className="flex items-center justify-between w-24 md:w-30 lg:w-36 gap-x-2 py-1 px-4 rounded-xl border border-gray-300">
 
                                         {/* <!-- bookmark --> */}
                                         <div className="flex text-green-900 dark:text-green-700">
@@ -354,13 +357,8 @@ export default function CartProduct() {
                                             </svg>
                                         </div>
 
-                                        <div className="flex pt-1 gap-x-1.5 text-gray-700 dark:text-white">
-                                            <span>
-                                                k
-                                            </span>
-                                            <span>
-                                                {cartProduct.bootmark}
-                                            </span>
+                                        <div className="flex pt-1 gap-x-1.5 text-gray-700 dark:text-white" style={{ direction: 'ltr' }}>
+                                            {cartProduct.bootmark > 1000 ? `${(cartProduct.bootmark / 1000).toFixed(1).replace(/\.0$/, '')} k` : cartProduct.bootmark}
                                         </div>
 
                                     </div>

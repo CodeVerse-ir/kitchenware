@@ -246,7 +246,7 @@ export default function BestSelling() {
                                         {/* <!-- Timer --> */}
                                         {
                                             cart.discount !== 0 &&
-                                            <Clock clock={cart.clock} />
+                                            <Clock clock={cart.clock} showClock={true}/>
                                         }
                                     </div>
                                 </Link>

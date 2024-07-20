@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Clock({ clock }) {
+export default function Clock({ clock, showClock }) {
 
     const initialSeconds = () => {
         const timeArray = clock.split(":");
@@ -42,13 +42,15 @@ export default function Clock({ clock }) {
 
 
     return (
-        <div className="flex items-center justify-center text-gray-400">
+        <div className={`flex items-center justify-center ${showClock ? "text-gray-400" : "text-orange-400 dark:text-orange-600"} `}>
             <div className="ml-1 text-sm lg:text-base">
                 {existSeconds(timer)}
             </div>
-            <svg className="hidden md:inline-block mb-1 w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6">
-                <use href="#clock"></use>
-            </svg>
+            {showClock &&
+                <svg className="hidden md:inline-block mb-1 w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6">
+                    <use href="#clock"></use>
+                </svg>
+            }
         </div>
     );
 }

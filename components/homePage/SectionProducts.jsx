@@ -21,7 +21,7 @@ const carts = [
         path: '/product',
         image: product1,
         star: 5,
-        code:12354,
+        code: 12354,
     },
     {
         productName: 'کتری و قوری استیل 2 لیتر مدل کلاسیک یونیک کد UN-7264',
@@ -32,7 +32,7 @@ const carts = [
         path: '/product',
         image: product2,
         star: 2,
-        code:12354,
+        code: 12354,
     },
     {
         productName: 'کتری و قوری استیل 2 لیتر مدل کلاسیک یونیک کد UN-7264',
@@ -43,7 +43,7 @@ const carts = [
         path: '/product',
         image: product3,
         star: 3,
-        code:12354,
+        code: 12354,
     },
     {
         productName: 'کتری و قوری استیل 2 لیتر مدل کلاسیک یونیک کد UN-7264',
@@ -54,7 +54,7 @@ const carts = [
         path: '/product',
         image: product4,
         star: 4,
-        code:12354,
+        code: 12354,
     },
     {
         productName: 'کتری و قوری استیل 2 لیتر مدل کلاسیک یونیک کد UN-7264',
@@ -65,7 +65,7 @@ const carts = [
         path: '/product',
         image: product5,
         star: 2,
-        code:12354,
+        code: 12354,
     },
     {
         productName: 'کتری و قوری استیل 2 لیتر مدل کلاسیک یونیک کد UN-7264',
@@ -76,7 +76,7 @@ const carts = [
         path: '/product',
         image: product6,
         star: 3,
-        code:12354,
+        code: 12354,
     },
     {
         productName: 'کتری و قوری استیل 2 لیتر مدل کلاسیک یونیک کد UN-7264',
@@ -87,7 +87,7 @@ const carts = [
         path: '/product',
         image: product1,
         star: 1,
-        code:12354,
+        code: 12354,
     },
     {
         productName: 'کتری و قوری استیل 2 لیتر مدل کلاسیک یونیک کد UN-7264',
@@ -98,7 +98,7 @@ const carts = [
         path: '/product',
         image: product2,
         star: 4,
-        code:12354,
+        code: 12354,
     },
 ]
 
@@ -210,7 +210,7 @@ export default function SectionProducts() {
                                     {/* <!-- Timer --> */}
                                     {
                                         cart.discount !== 0 &&
-                                        <Clock clock={cart.clock} />
+                                        <Clock clock={cart.clock} showClock={true} />
                                     }
 
                                 </div>
