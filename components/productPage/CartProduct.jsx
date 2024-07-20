@@ -8,6 +8,7 @@ import Clock from '../homePage/Clock';
 import SvgCartProduct from '../svg/SvgCartProduct';
 import { color } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import AlertPictures from './AlertPictures';
 
 const cartProduct = {
     productName: 'سرویس چینی زرین نئوکلاسیک دلسا 6 نفره 29 پارچه',
@@ -375,6 +376,8 @@ export default function CartProduct() {
                 </div>
 
             </div>
+
+            <AlertPictures />
         </>
     )
 }
