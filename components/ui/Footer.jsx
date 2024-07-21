@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import logo from '../../public/utils/image/logo/logo.png';
 import SvgFooter from '../svg/SvgFooter';
@@ -31,6 +33,14 @@ const list = [
 ]
 
 export default function Footer() {
+
+    const scrollToTop = () => {  
+        window.scrollTo({  
+            top: 0,  
+            behavior: 'smooth' // برای حرکت نرم  
+        });  
+    }; 
+
     return (
         <>
             <SvgFooter />
@@ -45,7 +55,7 @@ export default function Footer() {
 
                 {/* <!-- Arrow Circle --> */}
                 <div
-                    className="absolute top-0 left-0 right-0 mx-auto -translate-y-2/4 hidden md:flex items-center justify-center w-[30px] h-[30px] border-2 border-orange-300 rounded-full">
+                    className="absolute top-0 left-0 right-0 mx-auto -translate-y-2/4 hidden md:flex items-center justify-center w-[30px] h-[30px] border-2 border-orange-300 rounded-full cursor-pointer" onClick={scrollToTop}>
                     <svg className="w-5 h-5 text-zinc-700 dark:text-white rotate-180">
                         <use href="#chevron-down-mini"></use>
                     </svg>
