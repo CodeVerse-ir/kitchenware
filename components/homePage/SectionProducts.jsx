@@ -176,7 +176,7 @@ export default function SectionProducts() {
                                 <div className="flex items-center justify-start gap-x-1.5 md:gap-x-2 mt-1.5 md:mt-2.5">
                                     <div className="text-teal-600 dark:text-emerald-500">
                                         <span className="font-DanaBold text-base lg:text-xl">
-                                            {cart.price}
+                                        {Number(cart.price).toLocaleString()}
                                         </span>
                                         <span className="pr-1 text-xs md:text-sm tracking-tighter">
                                             تومان
@@ -186,7 +186,7 @@ export default function SectionProducts() {
                                         cart.discount !== 0 &&
                                         <div className="mr-2 text-xs md:text-sm text-gray-400 line-through lg:text-base decoration-red-500 decoration-1">
                                             <span className=''>
-                                                {cart.discount}
+                                            {Number(cart.discount).toLocaleString()}
                                             </span>
                                             <span className="inline">
                                                 تومان

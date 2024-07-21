@@ -289,14 +289,14 @@ export default function CartProduct() {
                                     <div className="flex items-center justify-start gap-x-2 py-1 px-2.5 rounded-xl border border-gray-300">
                                         <span>تخفیف :</span>
                                         <div className="text-gray-500 dark:text-gray-300 line-through decoration-red-400 decoration-[1.5px]">
-                                            {cartProduct.discount}
+                                            {Number(cartProduct.discount).toLocaleString()}
                                             <span className="pr-1">تومان</span>
                                         </div>
                                     </div>
                                     <div className="flex items-center justify-start gap-x-2 py-1 px-2.5 rounded-xl border border-gray-300">
                                         <span>قیمت :</span>
                                         <div className="font-DanaBold">
-                                            {cartProduct.price}
+                                            {Number(cartProduct.price).toLocaleString()}
                                             <span className="font-Dana pr-1">تومان</span>
                                         </div>
                                     </div>
@@ -380,7 +380,7 @@ export default function CartProduct() {
             <AlertComment showComment={showComment} handleShowComment={handleShowComment} handleSaveComment={handleSaveComment} />
             <NoScroll noScroll={showComment} />
 
-            <AlertSave textAlert="نظر ثبت شد !" showAlert={showAlert} setShowAlert={setShowAlert} />
+            <AlertSave textAlert="نظر شما ثبت شد !" showAlert={showAlert} setShowAlert={setShowAlert} />
 
             <div className={`${showPicture || showComment ? "visible opacity-100" : "invisible opacity-0"} overlay-alert`} onClick={closeAlert}></div>
         </>
