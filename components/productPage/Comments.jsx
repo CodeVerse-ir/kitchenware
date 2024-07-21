@@ -2,8 +2,9 @@ import avatar from '../../public/utils/image/comment/avatar.png';
 
 import Image from 'next/image';
 import SvgComments from '../svg/SvgComments';
+import { useState } from 'react';
 
-const comments = [
+const initialComments = [
     {
         name: 'منصوره بادله',
         date: {
@@ -16,6 +17,8 @@ const comments = [
         star: 1,
         like: 12,
         dislike: 2,
+        isLiked: false,
+        isDisliked: false,
         image: avatar,
     },
     {
@@ -30,6 +33,8 @@ const comments = [
         star: 5,
         like: 16,
         dislike: 0,
+        isLiked: false,
+        isDisliked: false,
         image: avatar,
     },
     {
@@ -44,6 +49,8 @@ const comments = [
         star: 4,
         like: 3,
         dislike: 5,
+        isLiked: false,
+        isDisliked: false,
         image: avatar,
     },
     {
@@ -58,11 +65,58 @@ const comments = [
         star: 3,
         like: 26,
         dislike: 19,
+        isLiked: false,
+        isDisliked: false,
         image: avatar,
     },
 ]
 
+
 export default function Comments({ showComment }) {
+
+    const [comments, setComments] = useState(initialComments);
+
+    const toggleLike = (index) => {
+        setComments(prevComments => {
+            const newComments = [...prevComments]; // کپی از نظرات فعلی  
+
+            const comment = { ...newComments[index] }; // کپی از نظر فعلی  
+
+            if (comment.isLiked) {
+                comment.like -= 1;
+                comment.isLiked = false; // اینجا باید false باشد  
+            } else {
+                comment.like += 1;
+                comment.isLiked = true; // اینجا باید true باشد  
+            }
+
+            newComments[index] = comment; // بروزرسانی نظر خاص در لیست جدید 
+
+            return newComments; // برگرداندن لیست جدید  
+        });
+    };
+
+
+    const toggleDislike = (index) => {
+        setComments(prevComments => {
+            const newComments = [...prevComments]; // کپی از نظرات فعلی  
+
+            const comment = { ...newComments[index] }; // کپی از نظر فعلی  
+
+            if (comment.isDisliked) {
+                comment.dislike -= 1;
+                comment.isDisliked = false; // اینجا باید false باشد  
+            } else {
+                comment.dislike += 1;
+                comment.isDisliked = true; // اینجا باید true باشد  
+            }
+
+            newComments[index] = comment; // بروزرسانی نظر خاص در لیست جدید 
+
+            return newComments; // برگرداندن لیست جدید  
+        });
+    };
+
     return (
         <>
             <SvgComments />
@@ -128,18 +182,18 @@ export default function Comments({ showComment }) {
                                 {/* <!-- Like & Dislike --> */}
                                 <div className="flex gap-x-2">
                                     <div
-                                        className="group flex items-center justify-center w-16 h-8 lg:w-20 lg:h-10 gap-x-2 rounded-xl border border-gray-300 child:transition-all select-none">
+                                        className="group flex items-center justify-center w-16 h-8 lg:w-20 lg:h-10 gap-x-2 rounded-xl border border-gray-300 child:transition-all select-none" onClick={() => toggleLike(index)}>
                                         <svg className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 group-hover:scale-125">
-                                            <use href="#hand-thumb-up"></use>
+                                            <use href={`#${comment.isLiked ? "hand-up-solid" : "hand-up"}`}></use>
                                         </svg>
                                         <span className="mt-1">
                                             {comment.like}
                                         </span>
                                     </div>
                                     <div
-                                        className="group flex items-center justify-center w-16 h-8 lg:w-20 lg:h-10 gap-x-2 rounded-xl border border-gray-300 child:transition-all select-none">
+                                        className="group flex items-center justify-center w-16 h-8 lg:w-20 lg:h-10 gap-x-2 rounded-xl border border-gray-300 child:transition-all select-none" onClick={() => toggleDislike(index)}>
                                         <svg className="w-4 h-4 lg:w-5 lg:h-5 text-red-500 group-hover:scale-125">
-                                            <use href="#hand-thumb-down"></use>
+                                            <use href={`#${comment.isDisliked ? "hand-down-solid" : "hand-down"}`}></use>
                                         </svg>
                                         <span className="mt-1">
                                             {comment.dislike}
@@ -148,9 +202,6 @@ export default function Comments({ showComment }) {
                                 </div>
                             </div>
                         </div>
-
-                        {/* <!-- Line --> */}
-                        {/* <div className="w-full h-px bg-gray-300"></div> */}
 
                     </div>
                 })}
