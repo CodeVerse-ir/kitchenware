@@ -12,6 +12,8 @@ import SvgCartProduct from '../svg/SvgCartProduct';
 import { useEffect, useState } from 'react';
 import AlertPictures from './AlertPictures';
 import NoScroll from '../ui/NoScroll';
+import AlertComment from './AlertComment';
+import AlertSave from '../ui/AlertSave';
 
 const cartProduct = {
     productName: 'سرویس چینی زرین نئوکلاسیک دلسا 6 نفره 29 پارچه',
@@ -76,10 +78,25 @@ export default function CartProduct() {
     const [like, setLike] = useState(false);
     const [bootmark, setBootmark] = useState(false);
     const [showPicture, setShowPicture] = useState(false);
+    const [showComment, setShowComment] = useState(false);
+    const [saveComment, setSaveComment] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
 
     const handleStar = () => setLike(!like);
     const handleBootmark = () => setBootmark(!bootmark);
     const handleShowPicture = () => setShowPicture(!showPicture);
+    const handleShowComment = () => {
+        if (!saveComment) {
+            setShowComment(!showComment)
+        }
+    };
+    const closeAlert = () => { setShowPicture(false) || setShowComment(false) }
+    const handleSaveComment = () => {
+        handleShowComment();
+        setSaveComment(true);
+        setShowAlert(true);
+    }
+
 
     return (
         <>
@@ -116,7 +133,7 @@ export default function CartProduct() {
                         <div className="flex flex-col gap-y-2">
                             {/* <!-- Star --> */}
                             <div
-                                className="group flex items-center justify-center w-12 h-12 rounded-xl text-orange-300 border border-gray-300">
+                                className={`group flex items-center justify-center w-12 h-12 rounded-xl ${saveComment ? "text-red-500" : "text-orange-300"} border border-gray-300`} onClick={handleShowComment}>
                                 <svg className="w-5 h-5 group-hover:scale-125 transition-all">
                                     <use href="#star-solid"></use>
                                 </svg>
@@ -358,10 +375,14 @@ export default function CartProduct() {
             </div>
 
             <AlertPictures showPicture={showPicture} handleShowPicture={handleShowPicture} />
-
             <NoScroll noScroll={showPicture} />
 
-            <div className={`${showPicture ? "visible opacity-100" : "invisible opacity-0"} overlay-alert`} onClick={handleShowPicture}></div>
+            <AlertComment showComment={showComment} handleShowComment={handleShowComment} handleSaveComment={handleSaveComment} />
+            <NoScroll noScroll={showComment} />
+
+            <AlertSave textAlert="نظر ثبت شد !" showAlert={showAlert} setShowAlert={setShowAlert} />
+
+            <div className={`${showPicture || showComment ? "visible opacity-100" : "invisible opacity-0"} overlay-alert`} onClick={closeAlert}></div>
         </>
     )
 }
