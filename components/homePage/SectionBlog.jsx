@@ -18,7 +18,7 @@ const cartBlogs = [
         day: '21',
         mounth: 'مرداد',
         year: '1402',
-        path: '/blog/chini',
+        path: `/blog/${encodeURIComponent('محصولات چینی زرین')}`,
     },
     {
         image: blog2,
@@ -27,7 +27,8 @@ const cartBlogs = [
         day: '23',
         mounth: 'تیر',
         year: '1402',
-        path: '/blog/chini',
+        path: `/blog/${encodeURIComponent('سرویس چینی رنگی')}`,
+
     },
     {
         image: blog3,
@@ -36,7 +37,8 @@ const cartBlogs = [
         day: '05',
         mounth: 'فروردین',
         year: '1402',
-        path: '/blog/chini',
+        path: `/blog/${encodeURIComponent('راهنمای خرید ظروف آرکوپال')}`,
+
     },
     {
         image: blog4,
@@ -45,7 +47,8 @@ const cartBlogs = [
         day: '12',
         mounth: 'اردیبهشت',
         year: '1402',
-        path: '/blog/chini',
+        path: `/blog/${encodeURIComponent('خرید لوازم آشپزخانه')}`,
+
     },
 ]
 

@@ -1,19 +1,20 @@
-import brand1 from '../../public/utils/image/brands/b1.png';
-import brand2 from '../../public/utils/image/brands/b2.png';
-import brand3 from '../../public/utils/image/brands/b3.png';
-import brand4 from '../../public/utils/image/brands/b4.png';
-import brand5 from '../../public/utils/image/brands/b5.png';
-import brand6 from '../../public/utils/image/brands/b6.png';
-import brand7 from '../../public/utils/image/brands/b7.png';
-import brand8 from '../../public/utils/image/brands/b8.png';
-import brand9 from '../../public/utils/image/brands/b9.png';
-import brand10 from '../../public/utils/image/brands/b10.png';
-import brand11 from '../../public/utils/image/brands/b11.png';
-import brand12 from '../../public/utils/image/brands/b12.png';
-import brand13 from '../../public/utils/image/brands/b13.png';
-import brand14 from '../../public/utils/image/brands/b14.png';
-import brand15 from '../../public/utils/image/brands/b15.png';
-import brand16 from '../../public/utils/image/brands/b16.png';
+import brand1 from "../../public/utils/image/brands/b1.png";
+import brand2 from "../../public/utils/image/brands/b2.png";
+import brand3 from "../../public/utils/image/brands/b3.png";
+import brand4 from "../../public/utils/image/brands/b4.png";
+import brand5 from "../../public/utils/image/brands/b5.png";
+import brand6 from "../../public/utils/image/brands/b6.png";
+import brand7 from "../../public/utils/image/brands/b7.png";
+import brand8 from "../../public/utils/image/brands/b8.png";
+import brand9 from "../../public/utils/image/brands/b9.png";
+import brand10 from "../../public/utils/image/brands/b10.png";
+import brand11 from "../../public/utils/image/brands/b11.png";
+import brand12 from "../../public/utils/image/brands/b12.png";
+import brand13 from "../../public/utils/image/brands/b13.png";
+import brand14 from "../../public/utils/image/brands/b14.png";
+import brand15 from "../../public/utils/image/brands/b15.png";
+import brand16 from "../../public/utils/image/brands/b16.png";
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -25,68 +26,87 @@ import 'swiper/swiper-bundle.css';
 
 const brands = [
     {
+        name: 'فورته',
         image: brand1,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('فورته')}`,
     },
     {
+        name: 'لاوان',
         image: brand2,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('لاوان')}`,
     },
     {
+        name: 'لیمون',
         image: brand3,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('لیمون')}`,
     },
     {
+        name: 'ام جی اس',
         image: brand4,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('ام جی اس')}`,
     },
     {
+        name: 'براون',
         image: brand5,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('براون')}`,
     },
     {
+        name: 'چینی نور',
         image: brand6,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('چینی نور')}`,
     },
     {
+        name: 'چینی زرین',
         image: brand7,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('چینی زرین')}`,
     },
     {
+        name: 'چینی تقدیس',
         image: brand8,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('چینی تقدیس')}`,
     },
     {
+        name: 'زی',
         image: brand9,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('زی')}`,
     },
     {
+        name: 'آبرون',
         image: brand10,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('آبرون')}`,
     },
     {
+        name: 'لورین',
         image: brand11,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('لورین')}`,
     },
     {
+        name: 'ال جی',
         image: brand12,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('ال جی')}`,
     },
     {
+        name: 'اورال بی',
         image: brand13,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('اورال بی')}`,
     },
     {
+        name: 'دالتون',
         image: brand14,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('دالتون')}`,
+
     },
     {
+        name: 'سب',
         image: brand15,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('سب')}`,
+
     },
     {
+        name: 'بلک اند دکر',
         image: brand16,
-        path: "/products/b1",
+        path: `/products/${encodeURIComponent('بلک اند دکر')}`,
+
     },
 ]
 

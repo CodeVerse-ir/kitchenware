@@ -11,27 +11,27 @@ const items = [
     {
         image: category1,
         text: 'کالای سرامیکی و چینی',
-        path: '/products/chini',
+        path: `/products/${encodeURIComponent('کالای سرامیکی و چینی')}`,
     },
     {
         image: category2,
         text: 'کالای چوبی',
-        path: '/products/chobi',
+        path: `/products/${encodeURIComponent('کالای چوبی')}`,
     },
     {
         image: category3,
         text: 'مکمل خانه و آشپزخانه',
-        path: '/products/mokamel',
+        path: `/products/${encodeURIComponent('مکمل خانه و آشپزخانه')}`,
     },
     {
         image: category4,
         text: 'سرو و نوشیدنی',
-        path: '/products/serve',
+        path: `/products/${encodeURIComponent('سرو و نوشیدنی')}`,
     },
     {
         image: category5,
         text: 'ابزار آشپزخانه',
-        path: '/products/abzar',
+        path: `/products/${encodeURIComponent('ابزار آشپزخانه')}`,
     },
 ]
 

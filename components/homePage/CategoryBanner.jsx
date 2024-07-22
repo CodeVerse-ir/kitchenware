@@ -31,7 +31,7 @@ export default function CategoryBanner() {
                     <div
                         className="grid grid-cols-1 my-8 text-white gap-y-5 md:grid-cols-2 md:gap-x-5 md:min-h-64 md:my-5 child:min-h-36">
 
-                        <Link href='/products/pokht' className="category-top-right pr-7 md:pr-12 md:pt-[5.44rem] pt-[2.44rem]">
+                        <Link href={`/products/${encodeURIComponent('لوازم پخت و پز')}`} className="category-top-right pr-7 md:pr-12 md:pt-[5.44rem] pt-[2.44rem]">
                             <h4 className="font-DanaBold md:text-4xl/normal text-xl/normal">
                                 انواع لوازم پخت و پز
                             </h4>
@@ -40,7 +40,7 @@ export default function CategoryBanner() {
                             </sub>
                         </Link>
 
-                        <Link href='/products/bargi' className="category-top-left md:pr-12 md:pt-[5.44rem] pt-[2.44rem] pr-7">
+                        <Link href={`/products/${encodeURIComponent('لوازم برقی')}`} className="category-top-left md:pr-12 md:pt-[5.44rem] pt-[2.44rem] pr-7">
                             <h4 className="font-DanaBold md:text-4xl/normal text-xl/normal">
                                 لوازم برقی
                             </h4>

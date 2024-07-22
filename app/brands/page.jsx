@@ -30,86 +30,80 @@ const brands = [
     name: 'لاوان',
     image: brand2,
     path: `/products/${encodeURIComponent('لاوان')}`,
-  },
-  {
+},
+{
     name: 'لیمون',
-    image: brand2,
-    path: `/products/${encodeURIComponent('لیمون')}`,
-  },
-  {
-    name: 'ام جی اس',
     image: brand3,
-    path: `/products/${encodeURIComponent('ام جی اس')}`,
-  },
-  {
-    name: 'براون',
+    path: `/products/${encodeURIComponent('لیمون')}`,
+},
+{
+    name: 'ام جی اس',
     image: brand4,
-    path: `/products/${encodeURIComponent('براون')}`,
-  },
-  {
-    name: 'چینی نور',
+    path: `/products/${encodeURIComponent('ام جی اس')}`,
+},
+{
+    name: 'براون',
     image: brand5,
-    path: `/products/${encodeURIComponent('چینی نور')}`,
-  },
-  {
-    name: 'چینی زرین',
+    path: `/products/${encodeURIComponent('براون')}`,
+},
+{
+    name: 'چینی نور',
     image: brand6,
-    path: `/products/${encodeURIComponent('چینی زرین')}`,
-  },
-  {
-    name: 'چینی تقدیس',
+    path: `/products/${encodeURIComponent('چینی نور')}`,
+},
+{
+    name: 'چینی زرین',
     image: brand7,
-    path: `/products/${encodeURIComponent('چینی تقدیس')}`,
-  },
-  {
-    name: 'زی',
+    path: `/products/${encodeURIComponent('چینی زرین')}`,
+},
+{
+    name: 'چینی تقدیس',
     image: brand8,
-    path: `/products/${encodeURIComponent('زی')}`,
-  },
-  {
-    name: 'آبرون',
+    path: `/products/${encodeURIComponent('چینی تقدیس')}`,
+},
+{
+    name: 'زی',
     image: brand9,
-    path: `/products/${encodeURIComponent('آبرون')}`,
-  },
-  {
-    name: 'لورین',
+    path: `/products/${encodeURIComponent('زی')}`,
+},
+{
+    name: 'آبرون',
     image: brand10,
-    path: `/products/${encodeURIComponent('لورین')}`,
-  },
-  {
-    name: 'ال جی',
+    path: `/products/${encodeURIComponent('آبرون')}`,
+},
+{
+    name: 'لورین',
     image: brand11,
-    path: `/products/${encodeURIComponent('ال جی')}`,
-  },
-  {
-    name: 'اورال بی',
+    path: `/products/${encodeURIComponent('لورین')}`,
+},
+{
+    name: 'ال جی',
     image: brand12,
-    path: `/products/${encodeURIComponent('اورال بی')}`,
-  },
-  {
-    name: 'دالتون',
+    path: `/products/${encodeURIComponent('ال جی')}`,
+},
+{
+    name: 'اورال بی',
     image: brand13,
+    path: `/products/${encodeURIComponent('اورال بی')}`,
+},
+{
+    name: 'دالتون',
+    image: brand14,
     path: `/products/${encodeURIComponent('دالتون')}`,
 
-  },
-  {
+},
+{
     name: 'سب',
-    image: brand14,
+    image: brand15,
     path: `/products/${encodeURIComponent('سب')}`,
 
-  },
-  {
+},
+{
     name: 'بلک اند دکر',
-    image: brand15,
+    image: brand16,
     path: `/products/${encodeURIComponent('بلک اند دکر')}`,
 
-  },
-  {
-    name: 'دایموند',
-    image: brand16,
-    path: `/products/${encodeURIComponent('دایموند')}`,
-
-  },
+},
   {
     name: 'نام برند',
     image: no_brand,
