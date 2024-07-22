@@ -107,8 +107,9 @@ const carts = [
 
 export default function Products({ params }) {
   const { productsName } = params
+  const decodedProductName = decodeURIComponent(productsName);  
 
-  const [inputValue, setInputValue] = useState(productsName?.[0] || "");
+  const [inputValue, setInputValue] = useState(decodedProductName || "");
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);

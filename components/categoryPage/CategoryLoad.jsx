@@ -72,268 +72,58 @@ const categories = [
             {
                 name: 'سرخ کن',
                 image: category1_1,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('سرخ کن')}`,
             },
             {
                 name: 'ترازوی آشپزخانه',
                 image: category1_2,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('ترازوی آشپزخانه')}`,
             },
             {
                 name: 'کارواش خانگی',
                 image: category1_3,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('کارواش خانگی')}`,
             },
             {
                 name: 'دستگاه قهوه ساز',
                 image: category1_4,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('دستگاه قهوه ساز')}`,
             },
             {
                 name: 'جارو برقی',
                 image: category1_5,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('جارو برقی')}`,
             },
             {
                 name: 'کتری برقی',
                 image: category1_6,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('کتری برقی')}`,
             },
             {
                 name: 'چرخ گوشت',
                 image: category1_7,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('چرخ گوشت')}`,
             },
             {
                 name: 'خردکن برقی',
                 image: category1_8,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('خردکن برقی')}`,
             },
             {
                 name: 'ساندویچ ساز',
                 image: category1_9,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('ساندویچ ساز')}`,
             },
             {
                 name: 'مخلوط کن',
                 image: category1_10,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('مخلوط کن')}`,
             },
             {
                 name: 'چای ساز',
                 image: category1_11,
-                path: '/products/category',
+                path: `/products/${encodeURIComponent('چای ساز')}`,
             }
-        ]
-    },
-    {
-        title: 'مراقبت شخصی',
-        body: [
-            {
-                name: 'نام کالا',
-                image: category2_1,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category2_2,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category2_3,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category2_4,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category2_5,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category2_6,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category2_7,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category2_8,
-                path: '/products/category',
-            },
-        ]
-    },
-    {
-        title: 'ظروف چینی',
-        body: [
-            {
-                name: 'نام کالا',
-                image: category3_1,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_2,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_3,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_4,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_5,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_6,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_7,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_8,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_9,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_10,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_11,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category3_12,
-                path: '/products/category',
-            },
-        ]
-    },
-    {
-        title: 'تجهیزات آشپزخانه',
-        body: [
-            {
-                name: 'نام کالا',
-                image: category4_1,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category4_2,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category4_3,
-                path: '/products/category',
-            },
-        ]
-    },
-    {
-        title: 'ظروف سرو و پذیرایی',
-        body: [
-            {
-                name: 'نام کالا',
-                image: category5_1,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category5_2,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category5_3,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category5_4,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category5_5,
-                path: '/products/category',
-            },
-        ]
-    },
-    {
-        title: 'قاشق، چنگال و ابزار سرو',
-        body: [
-            {
-                name: 'نام کالا',
-                image: category6_1,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category6_2,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category6_3,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category6_4,
-                path: '/products/category',
-            },
-        ]
-    },
-    {
-        title: 'ظروف پخت و پز',
-        body: [
-            {
-                name: 'نام کالا',
-                image: category7_1,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category7_2,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category7_3,
-                path: '/products/category',
-            },
-            {
-                name: 'نام کالا',
-                image: category7_4,
-                path: '/products/category',
-            },
         ]
     },
 ];

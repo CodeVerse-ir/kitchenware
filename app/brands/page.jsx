@@ -24,102 +24,109 @@ const brands = [
   {
     name: 'فورته',
     image: brand1,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('فورته')}`,
   },
   {
     name: 'لاوان',
     image: brand2,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('لاوان')}`,
   },
   {
     name: 'لیمون',
     image: brand2,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('لیمون')}`,
   },
   {
     name: 'ام جی اس',
     image: brand3,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('ام جی اس')}`,
   },
   {
     name: 'براون',
     image: brand4,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('براون')}`,
   },
   {
     name: 'چینی نور',
     image: brand5,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('چینی نور')}`,
   },
   {
     name: 'چینی زرین',
     image: brand6,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('چینی زرین')}`,
   },
   {
     name: 'چینی تقدیس',
     image: brand7,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('چینی تقدیس')}`,
   },
   {
     name: 'زی',
     image: brand8,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('زی')}`,
   },
   {
     name: 'آبرون',
     image: brand9,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('آبرون')}`,
   },
   {
     name: 'لورین',
     image: brand10,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('لورین')}`,
   },
   {
     name: 'ال جی',
     image: brand11,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('ال جی')}`,
   },
   {
     name: 'اورال بی',
     image: brand12,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('اورال بی')}`,
   },
   {
     name: 'دالتون',
     image: brand13,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('دالتون')}`,
+
   },
   {
     name: 'سب',
     image: brand14,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('سب')}`,
+
   },
   {
     name: 'بلک اند دکر',
     image: brand15,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('بلک اند دکر')}`,
+
   },
   {
     name: 'دایموند',
     image: brand16,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('دایموند')}`,
+
   },
   {
     name: 'نام برند',
     image: no_brand,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('نام برند')}`,
+
   },
   {
     name: 'نام برند',
     image: no_brand,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('نام برند')}`,
+
   },
   {
     name: 'نام برند',
     image: no_brand,
-    path: '/products/brand',
+    path: `/products/${encodeURIComponent('نام برند')}`,
+
   },
 ]
 
