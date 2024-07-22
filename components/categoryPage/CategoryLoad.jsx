@@ -117,13 +117,223 @@ const categories = [
             {
                 name: 'مخلوط کن',
                 image: category1_10,
-                path: `/products/${encodeURIComponent('مخلوط کن')}`,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
             },
             {
                 name: 'چای ساز',
                 image: category1_11,
                 path: `/products/${encodeURIComponent('چای ساز')}`,
             }
+        ]
+    },
+    {
+        title: 'مراقبت شخصی',
+        body: [
+            {
+                name: 'نام دسته بندی',
+                image: category2_1,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category2_2,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category2_3,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category2_4,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category2_5,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category2_6,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category2_7,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category2_8,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            }
+        ]
+    },
+    {
+        title: 'ظروف چینی',
+        body: [
+            {
+                name: 'نام دسته بندی',
+                image: category3_1,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_2,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_3,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_4,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_5,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_6,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_7,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_8,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_9,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_10,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_11,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category3_12,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+        ]
+    },
+    {
+        title: 'تجهیزات آشپزخانه',
+        body: [
+            {
+                name: 'نام دسته بندی',
+                image: category4_1,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category4_2,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category4_3,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+        ]
+    },
+    {
+        title: 'ظروف سرو و پذیرایی',
+        body: [
+            {
+                name: 'نام دسته بندی',
+                image: category5_1,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category5_2,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category5_3,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category5_4,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category5_5,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+        ]
+    },
+    {
+        title: 'قاشق، چنگال و ابزار سرو',
+        body: [
+            {
+                name: 'نام دسته بندی',
+                image: category6_1,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category6_2,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category6_3,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category6_4,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+        ]
+    },
+    {
+        title: 'ظروف پخت و پز',
+        body: [
+            {
+                name: 'نام دسته بندی',
+                image: category7_1,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category7_2,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category7_3,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
+            {
+                name: 'نام دسته بندی',
+                image: category7_4,
+                path: `/products/${encodeURIComponent('نام دسته بندی')}`,
+            },
         ]
     },
 ];
