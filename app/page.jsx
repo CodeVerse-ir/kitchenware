@@ -10,6 +10,7 @@ import SectionBrands from '../components/homePage/SectionBrands';
 import SectionBlog from '../components/homePage/SectionBlog';
 import SectionContactUs from '../components/homePage/SectionContactUs';
 import SectionServices from '../components/homePage/SectionServices';
+import SectionTest from '../components/homePage/SectionTest';
 
 export default function Home() {
 
@@ -41,6 +42,8 @@ export default function Home() {
   return (
     <main>
       <SectionHome />
+
+      <SectionTest />
 
       <SectionProducts />
 
