@@ -83,8 +83,8 @@ export default function AlertComment({ showComment, handleShowComment, handleSav
                 </div>
                 {/* <!-- Footer --> */}
                 <div className="flex items-center justify-between mt-5 gap-x-2">
-                    <p className="">
-                        با انتخاب دکمه " ثبت نظر " موافقت خود را با قوانین انتشار محتوا در فروشگاه لوازم آشپزخانه کبیری اعلام می‌کنم.
+                    <p>
+                        با انتخاب دکمه &quot; ثبت نظر &quot; موافقت خود را با قوانین انتشار محتوا در فروشگاه لوازم آشپزخانه کبیری اعلام می‌کنم.
                     </p>
                     <div className="flex items-center justify-center w-30 h-12 rounded-lg bg-orange-400 text-white cursor-pointer select-none" onClick={license}>
                         ثبت نظر

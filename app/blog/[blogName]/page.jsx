@@ -1,10 +1,5 @@
-"use client";
-
 import spoon from '../../../public/utils/image/blogs/spoon.jpeg';
 import Image from 'next/image';
-
-import { useEffect, useState } from 'react';  
-import Loader from '../../../components/ui/Loader';
 
 const cartBlog = {
     name: 'راهنمای خرید قاشق و چنگال برای لوازم آشپزخانه',
@@ -51,29 +46,6 @@ const cartBlog = {
 
 export default function page({ params }) {
     const { blogName } = params
-
-    const [loading, setLoading] = useState(true);  
-
-    useEffect(() => {  
-
-        // فرض کنید داده‌ای از یک API می‌گیرید  
-        const fetchData = async () => {  
-            try {  
-                // به‌جای این مورد، داده‌های واقعی خود را بارگذاری کنید  
-                await new Promise(resolve => setTimeout(resolve, 5000)); // برای شبیه‌سازی بارگذاری  
-            } catch (error) {  
-                console.error('Error fetching data:', error);  
-            } finally {  
-                setLoading(false);  
-            }  
-        };  
-
-        fetchData();  
-    }, []);  
-
-    if (loading) {  
-        return <Loader />;  
-    }
 
     return (
         <>
