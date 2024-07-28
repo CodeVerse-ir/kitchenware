@@ -90,7 +90,7 @@ export default function BestSelling() {
                             {/* <!-- Slides --> */}
                             {products.map((cart, index) => {
                                 return <SwiperSlide key={index}>
-                                    <Link href={`${cart.path}/${cart.code}`}
+                                    <Link href={`/product/${cart.code}`}
                                         key={index}
                                         className='flex flex-col justify-between p-4 md:p-5 bg-white dark:bg-zinc-700 rounded-2xl'
                                     >

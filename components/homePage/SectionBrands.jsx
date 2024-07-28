@@ -91,7 +91,7 @@ export default function SectionBrands() {
                                         <Link
                                             key={index}
                                             className='max-w-[6.25rem] lg:max-w-25'
-                                            href={`${brand.path}/${encodeURIComponent(brand.name)}`}
+                                            href={`/products/brand/${encodeURIComponent(brand.name)}`}
                                         >
                                             <Image
                                                 className="w-14 h-14 lg:w-25 lg:h-25"

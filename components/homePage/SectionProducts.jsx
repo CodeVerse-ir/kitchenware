@@ -53,7 +53,7 @@ export default function SectionProducts() {
                         <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3.5 md:gap-5">
 
                             {products.map((cart, index) => {
-                                return <Link href={`${cart.path}/${cart.code}`}
+                                return <Link href={`/product/${cart.code}`}
                                     key={index}
                                     className='flex flex-col justify-between p-4 md:p-5 bg-white dark:bg-zinc-700 shadow-normal rounded-2xl'
                                 >

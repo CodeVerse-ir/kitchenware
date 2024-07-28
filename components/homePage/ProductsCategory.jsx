@@ -24,7 +24,7 @@ export default function ProductsCategory() {
                             {/* <!-- items --> */}
                             {category.map((item, index) => {
                                 return <Link key={index}
-                                    href={`${item.path}/${encodeURIComponent(item.text)}`}
+                                    href={`/products/category/${encodeURIComponent(item.text)}`}
                                     className="max-w-[6.25rem] lg:max-w-[12.5rem] flex flex-col">
                                     <Image
                                         className="lg:w-48 lg:h-56"

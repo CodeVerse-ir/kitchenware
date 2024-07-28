@@ -25,8 +25,6 @@ export default function Products({ params }) {
     <>
       <GetData setData={setProducts} path={`products?${paramPath}=${paramSearch}`} />
 
-      {console.log(`products?${paramPath}=${paramSearch}`)}
-
       {/* Loader */}
       {!products && <div>در حال بارگذاری داده‌ها...</div>}
 

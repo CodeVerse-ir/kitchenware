@@ -103,7 +103,7 @@ export default function SectionBlog() {
                                                 <span>{blog.mounth}</span>
                                                 <span>{blog.year}</span>
                                             </div>
-                                            <Link href={`${blog.path}/${encodeURIComponent(blog.title)}`}
+                                            <Link href={`/blog/${encodeURIComponent(blog.title)}`}
                                                 className="flex items-center justify-evenly bg-orange-200/20 text-orange-300 w-[4.4375rem] h-5 rounded-md">
                                                 <p className="text-sm/4">مطالعه</p>
                                                 <svg className="w-4 h-4">
