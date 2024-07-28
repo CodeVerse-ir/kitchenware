@@ -141,7 +141,7 @@ export default function Brands() {
           </div>
 
           {/* <!-- Section Body  --> */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-10 px-5 sm:px-0 md:gap-5 lg:gap-10">
+          <div className="grid place-items-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 px-0 md:px-5 gap-5 md:gap-5 lg:gap-10">
             {/* <!-- item 1 --> */}
             {brands.map((brand, index) => {
               return <Link key={index} href={brand.path}

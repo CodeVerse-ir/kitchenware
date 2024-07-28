@@ -16,14 +16,14 @@ const servises = [
         subText: 'صبح از ساعت 8 تا 13 و بعد از ظهر 16 تا 21',
     },
     {
-        image: discount,
-        text: 'ارزان بخرید',
-        subText: 'قیمت ها را مقایسه کنید',
-    },
-    {
         image: certificate,
         text: 'با کیفیت بخرید',
         subText: 'بهترین محصولات از شرکت های مشهور',
+    },
+    {
+        image: discount,
+        text: 'ارزان بخرید',
+        subText: 'قیمت ها را مقایسه کنید',
     },
 ]
 
@@ -35,7 +35,7 @@ export default function SectionServices() {
 
                     {/* <!-- support & delivery --> */}
                     <div
-                        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center text-zinc-700 dark:text-white gap-y-11 md:gap-x-4 lg:gap-x-5 mb-14 md:mb-36">
+                        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-zinc-700 dark:text-white gap-y-11 md:gap-x-4 lg:gap-x-5 mb-14 md:mb-36 items-start justify-items-center" >
 
                         {servises.map((servise, index) => {
                             {/* <!-- support --> */ }
@@ -50,7 +50,7 @@ export default function SectionServices() {
                                 />
 
                                 {/* <!-- text --> */}
-                                <div className="flex flex-col items-start justify-between md:max-h-14">
+                                <div className="flex flex-col items-center md:items-start justify-between  w-[200px] md:max-h-14">
                                     <p className="text-sm font-DanaBold lg:text-lg text-nowrap">
                                         {servise.text}
                                     </p>
