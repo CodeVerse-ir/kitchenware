@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 // const baseURL = "http://localhost:5000/";
-const baseURL = "https://kitchenware.vercel.app/api/";
+const baseURL = "https://fake-json-server-in.vercel.app/api/";
 
 export default function GetData({ setData, path }) {
     useEffect(() => {

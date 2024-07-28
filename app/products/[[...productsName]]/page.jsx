@@ -11,8 +11,8 @@ import GetData from "../../../axios/GetData";
 export default function Products({ params }) {
   const { productsName } = params
 
-  const [paramPath, setParamPath] = useState(productsName[0]);
-  const [paramSearch, setParamSearch] = useState(decodeURIComponent(productsName[1]));
+  const [paramPath, setParamPath] = useState(productsName?.[0]);
+  const [paramSearch, setParamSearch] = useState(decodeURIComponent(productsName?.[1]));
 
   const handleInputChange = (event) => {
     setParamSearch(event.target.value);
