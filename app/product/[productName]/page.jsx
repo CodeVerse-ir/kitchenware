@@ -25,10 +25,10 @@ export default function Product({ params }) {
               </h2>
             </div>
 
-            <CartProduct />
+            <CartProduct productName={productName} />
             <ChangeInformation showComment={showComment} setShowComment={setShowComment} />
-            <Description showComment={showComment} />
-            <Comments showComment={showComment} />
+            <Description showComment={showComment} productName={productName} />
+            <Comments showComment={showComment} productName={productName} />
 
           </div>
         </section>

@@ -13,7 +13,7 @@ export default function SectionBlog() {
 
     return (
         <>
-            <GetData setData={setBlogs} path="blogs" />
+            <GetData setData={setBlogs} path="blogs?_start=0&_end=4" />
 
             {/* Loader */}
             {!blogs && <div>در حال بارگذاری داده‌ها...</div>}

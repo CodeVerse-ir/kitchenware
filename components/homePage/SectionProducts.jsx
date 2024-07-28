@@ -61,7 +61,7 @@ export default function SectionProducts() {
 
                                         <Image
                                             className="mx-auto md:w-auto"
-                                            src={cart.image}
+                                            src={cart.image[0]}
                                             alt={`product ${index + 1}`}
                                             width={128}
                                             height={128}
@@ -101,7 +101,7 @@ export default function SectionProducts() {
                                                 <span className=''>
                                                     {Number(cart.discount).toLocaleString()}
                                                 </span>
-                                                <span className="inline">
+                                                <span className="hidden lg:inline">
                                                     تومان
                                                 </span>
                                             </div>
