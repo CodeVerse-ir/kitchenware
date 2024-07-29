@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import GetData from '../../../axios/GetData';
 
-export default function page({ params }) {
+export default function Blog({ params }) {
     const { blogName } = params
 
     const [blog, setBlog] = useState(null);
